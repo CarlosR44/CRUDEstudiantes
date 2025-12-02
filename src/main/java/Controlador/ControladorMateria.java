@@ -3,7 +3,7 @@ package Controlador;
 import Modelo.Materia;
 import Modelo.MateriaDAO;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet; // Importación necesaria para la anotación
+import jakarta.servlet.annotation.WebServlet; 
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -11,11 +11,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-// Cliente del Web Service
+
 import wscliente.ServicioMatriculas;
 import wscliente.ServicioMatriculas_Service;
 
-// ⭐ SOLUCIÓN AL 404: Mapea el Servlet a la URL /ControladorMateria
+
 @WebServlet(name = "ControladorMateria", urlPatterns = {"/ControladorMateria"})
 public class ControladorMateria extends HttpServlet {
 
@@ -38,7 +38,7 @@ public class ControladorMateria extends HttpServlet {
         switch (accion) {
 
             case "listar":
-                // Listar todas las materias
+                
                 request.setAttribute("materias", dao.ListarTodos());
                 request.getRequestDispatcher(pagListar).forward(request, response);
                 break;
@@ -66,7 +66,7 @@ public class ControladorMateria extends HttpServlet {
                 response.sendRedirect("ControladorMateria?accion=listar");
                 break;
 
-            // Nueva acción: listar materias por estudiante vía WS
+           
             case "listarPorEstudianteWS":
                 String idEst = request.getParameter("texto");
                 List<Modelo.Materia> listaMaterias = new ArrayList<>();
@@ -76,15 +76,14 @@ public class ControladorMateria extends HttpServlet {
                     try {
                         estudianteId = Integer.parseInt(idEst);
                         
-                        // 1. Inicializar el servicio
+                    
                         ServicioMatriculas_Service servicio = new ServicioMatriculas_Service();
                         ServicioMatriculas port = servicio.getServicioMatriculasPort();
 
-                        // 2. Llamar al Web Service
-                        // La clase Materia devuelta es la generada por el WS (wscliente.Materia)
+                      
                         List<wscliente.Materia> materiasWS = port.getMateriasPorEstudiante(estudianteId);
 
-                        // 3. Convertir de wscliente.Materia a Modelo.Materia
+                       
                         for (wscliente.Materia mWS : materiasWS) {
                             Modelo.Materia m = new Modelo.Materia();
                             m.setId(mWS.getId());

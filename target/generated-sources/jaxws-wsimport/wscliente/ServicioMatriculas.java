@@ -33,10 +33,10 @@ public interface ServicioMatriculas {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "bye", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.Bye")
-    @ResponseWrapper(localName = "byeResponse", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.ByeResponse")
-    @Action(input = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/byeRequest", output = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/byeResponse")
-    public String bye(
+    @RequestWrapper(localName = "hello", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.Hello")
+    @ResponseWrapper(localName = "helloResponse", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.HelloResponse")
+    @Action(input = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/helloRequest", output = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/helloResponse")
+    public String hello(
         @WebParam(name = "name", targetNamespace = "")
         String name);
 
@@ -48,27 +48,12 @@ public interface ServicioMatriculas {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "hello", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.Hello")
-    @ResponseWrapper(localName = "helloResponse", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.HelloResponse")
-    @Action(input = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/helloRequest", output = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/helloResponse")
-    public String hello(
+    @RequestWrapper(localName = "bye", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.Bye")
+    @ResponseWrapper(localName = "byeResponse", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.ByeResponse")
+    @Action(input = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/byeRequest", output = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/byeResponse")
+    public String bye(
         @WebParam(name = "name", targetNamespace = "")
         String name);
-
-    /**
-     * 
-     * @param idMateria
-     * @return
-     *     returns java.util.List<wscliente.Estudiante>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getEstudiantePorMateria", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.GetEstudiantePorMateria")
-    @ResponseWrapper(localName = "getEstudiantePorMateriaResponse", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.GetEstudiantePorMateriaResponse")
-    @Action(input = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/getEstudiantePorMateriaRequest", output = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/getEstudiantePorMateriaResponse")
-    public List<Estudiante> getEstudiantePorMateria(
-        @WebParam(name = "idMateria", targetNamespace = "")
-        int idMateria);
 
     /**
      * 
@@ -84,5 +69,20 @@ public interface ServicioMatriculas {
     public List<Materia> getMateriasPorEstudiante(
         @WebParam(name = "idEstudiante", targetNamespace = "")
         int idEstudiante);
+
+    /**
+     * 
+     * @param idMateria
+     * @return
+     *     returns java.util.List<wscliente.Estudiante>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getEstudiantePorMateria", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.GetEstudiantePorMateria")
+    @ResponseWrapper(localName = "getEstudiantePorMateriaResponse", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.GetEstudiantePorMateriaResponse")
+    @Action(input = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/getEstudiantePorMateriaRequest", output = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/getEstudiantePorMateriaResponse")
+    public List<Estudiante> getEstudiantePorMateria(
+        @WebParam(name = "idMateria", targetNamespace = "")
+        int idMateria);
 
 }
