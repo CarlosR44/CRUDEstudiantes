@@ -3,7 +3,7 @@ package Controlador;
 import Modelo.Materia;
 import Modelo.MateriaDAO;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet; 
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -11,10 +11,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import wscliente.ServicioMatriculas;
 import wscliente.ServicioMatriculas_Service;
-
 
 @WebServlet(name = "ControladorMateria", urlPatterns = {"/ControladorMateria"})
 public class ControladorMateria extends HttpServlet {
@@ -38,7 +36,7 @@ public class ControladorMateria extends HttpServlet {
         switch (accion) {
 
             case "listar":
-                
+
                 request.setAttribute("materias", dao.ListarTodos());
                 request.getRequestDispatcher(pagListar).forward(request, response);
                 break;
@@ -66,24 +64,29 @@ public class ControladorMateria extends HttpServlet {
                 response.sendRedirect("ControladorMateria?accion=listar");
                 break;
 
-           
             case "listarPorEstudianteWS":
                 String idEst = request.getParameter("texto");
                 List<Modelo.Materia> listaMaterias = new ArrayList<>();
-                int estudianteId = -1; // Usamos un ID por defecto
+                int estudianteId = -1;
 
                 if (idEst != null && !idEst.isEmpty()) {
                     try {
                         estudianteId = Integer.parseInt(idEst);
-                        
-                    
+
                         ServicioMatriculas_Service servicio = new ServicioMatriculas_Service();
                         ServicioMatriculas port = servicio.getServicioMatriculasPort();
 
-                      
+                        wscliente.Estudiante estWS = port.getEstudiante(estudianteId);
+
+                        if (estWS != null) {
+                            String nombreCompleto = estWS.getNombre() + " " + estWS.getApellido();
+                            request.setAttribute("estudianteNombre", nombreCompleto);
+                        } else {
+                            request.setAttribute("mensajeError", "No existe un estudiante con ID " + estudianteId);
+                        }
+
                         List<wscliente.Materia> materiasWS = port.getMateriasPorEstudiante(estudianteId);
 
-                       
                         for (wscliente.Materia mWS : materiasWS) {
                             Modelo.Materia m = new Modelo.Materia();
                             m.setId(mWS.getId());
@@ -92,8 +95,7 @@ public class ControladorMateria extends HttpServlet {
                             m.setDescripcion(mWS.getDescripcion());
                             listaMaterias.add(m);
                         }
-                    
-                     
+
                     } catch (NumberFormatException e) {
                         System.err.println("ID de estudiante no es un número válido: " + idEst);
                         request.setAttribute("mensajeError", "El ID de estudiante debe ser un número.");
@@ -104,8 +106,8 @@ public class ControladorMateria extends HttpServlet {
                         listaMaterias = new ArrayList<>();
                     }
                 }
-                
-                request.setAttribute("idEstudianteBuscado", idEst); 
+
+                request.setAttribute("idEstudianteBuscado", idEst);
                 request.setAttribute("materias", listaMaterias);
                 request.getRequestDispatcher(pagMateriasPorEst).forward(request, response);
                 return;

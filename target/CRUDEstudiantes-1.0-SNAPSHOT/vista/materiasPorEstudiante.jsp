@@ -29,6 +29,11 @@
             </div>
         </c:if>
 
+        <c:if test="${not empty estudianteNombre}">
+            <h4>Materias matriculadas del estudiante: <strong>${estudianteNombre}</strong></h4>
+        </c:if>
+
+
         <table class="table table-bordered table-striped">
             <thead class="table-dark">
                 <tr>

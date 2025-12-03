@@ -3,6 +3,7 @@ package wscliente;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -37,9 +38,13 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Materia {
 
+    @XmlElement(namespace = "http://ws.crudestudiantesws.carlos.com/")
     protected String codigo;
+    @XmlElement(namespace = "http://ws.crudestudiantesws.carlos.com/")
     protected String descripcion;
+    @XmlElement(namespace = "http://ws.crudestudiantesws.carlos.com/")
     protected int id;
+    @XmlElement(namespace = "http://ws.crudestudiantesws.carlos.com/")
     protected String nombre;
 
     /**

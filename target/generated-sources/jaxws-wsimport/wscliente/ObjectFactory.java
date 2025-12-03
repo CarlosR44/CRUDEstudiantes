@@ -26,8 +26,12 @@ public class ObjectFactory {
 
     private final static QName _Bye_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "bye");
     private final static QName _ByeResponse_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "byeResponse");
+    private final static QName _GetEstudiante_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "getEstudiante");
     private final static QName _GetEstudiantePorMateria_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "getEstudiantePorMateria");
     private final static QName _GetEstudiantePorMateriaResponse_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "getEstudiantePorMateriaResponse");
+    private final static QName _GetEstudianteResponse_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "getEstudianteResponse");
+    private final static QName _GetMateria_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "getMateria");
+    private final static QName _GetMateriaResponse_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "getMateriaResponse");
     private final static QName _GetMateriasPorEstudiante_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "getMateriasPorEstudiante");
     private final static QName _GetMateriasPorEstudianteResponse_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "getMateriasPorEstudianteResponse");
     private final static QName _Hello_QNAME = new QName("http://ws.crudestudiantesws.carlos.com/", "hello");
@@ -57,6 +61,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetEstudiante }
+     * 
+     */
+    public GetEstudiante createGetEstudiante() {
+        return new GetEstudiante();
+    }
+
+    /**
      * Create an instance of {@link GetEstudiantePorMateria }
      * 
      */
@@ -70,6 +82,30 @@ public class ObjectFactory {
      */
     public GetEstudiantePorMateriaResponse createGetEstudiantePorMateriaResponse() {
         return new GetEstudiantePorMateriaResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetEstudianteResponse }
+     * 
+     */
+    public GetEstudianteResponse createGetEstudianteResponse() {
+        return new GetEstudianteResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetMateria }
+     * 
+     */
+    public GetMateria createGetMateria() {
+        return new GetMateria();
+    }
+
+    /**
+     * Create an instance of {@link GetMateriaResponse }
+     * 
+     */
+    public GetMateriaResponse createGetMateriaResponse() {
+        return new GetMateriaResponse();
     }
 
     /**
@@ -147,6 +183,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetEstudiante }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetEstudiante }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws.crudestudiantesws.carlos.com/", name = "getEstudiante")
+    public JAXBElement<GetEstudiante> createGetEstudiante(GetEstudiante value) {
+        return new JAXBElement<GetEstudiante>(_GetEstudiante_QNAME, GetEstudiante.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetEstudiantePorMateria }{@code >}
      * 
      * @param value
@@ -170,6 +219,45 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://ws.crudestudiantesws.carlos.com/", name = "getEstudiantePorMateriaResponse")
     public JAXBElement<GetEstudiantePorMateriaResponse> createGetEstudiantePorMateriaResponse(GetEstudiantePorMateriaResponse value) {
         return new JAXBElement<GetEstudiantePorMateriaResponse>(_GetEstudiantePorMateriaResponse_QNAME, GetEstudiantePorMateriaResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetEstudianteResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetEstudianteResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws.crudestudiantesws.carlos.com/", name = "getEstudianteResponse")
+    public JAXBElement<GetEstudianteResponse> createGetEstudianteResponse(GetEstudianteResponse value) {
+        return new JAXBElement<GetEstudianteResponse>(_GetEstudianteResponse_QNAME, GetEstudianteResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetMateria }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetMateria }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws.crudestudiantesws.carlos.com/", name = "getMateria")
+    public JAXBElement<GetMateria> createGetMateria(GetMateria value) {
+        return new JAXBElement<GetMateria>(_GetMateria_QNAME, GetMateria.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetMateriaResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetMateriaResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://ws.crudestudiantesws.carlos.com/", name = "getMateriaResponse")
+    public JAXBElement<GetMateriaResponse> createGetMateriaResponse(GetMateriaResponse value) {
+        return new JAXBElement<GetMateriaResponse>(_GetMateriaResponse_QNAME, GetMateriaResponse.class, null, value);
     }
 
     /**

@@ -34,7 +34,7 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class GetEstudiantePorMateriaResponse {
 
-    @XmlElement(name = "return", namespace = "")
+    @XmlElement(name = "return")
     protected List<Estudiante> _return;
 
     /**

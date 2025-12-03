@@ -42,6 +42,21 @@ public interface ServicioMatriculas {
 
     /**
      * 
+     * @param idMateria
+     * @return
+     *     returns wscliente.Materia
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getMateria", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.GetMateria")
+    @ResponseWrapper(localName = "getMateriaResponse", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.GetMateriaResponse")
+    @Action(input = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/getMateriaRequest", output = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/getMateriaResponse")
+    public Materia getMateria(
+        @WebParam(name = "idMateria", targetNamespace = "")
+        int idMateria);
+
+    /**
+     * 
      * @param name
      * @return
      *     returns java.lang.String
@@ -54,6 +69,21 @@ public interface ServicioMatriculas {
     public String bye(
         @WebParam(name = "name", targetNamespace = "")
         String name);
+
+    /**
+     * 
+     * @param idEstudiante
+     * @return
+     *     returns wscliente.Estudiante
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getEstudiante", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.GetEstudiante")
+    @ResponseWrapper(localName = "getEstudianteResponse", targetNamespace = "http://ws.crudestudiantesws.carlos.com/", className = "wscliente.GetEstudianteResponse")
+    @Action(input = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/getEstudianteRequest", output = "http://ws.crudestudiantesws.carlos.com/ServicioMatriculas/getEstudianteResponse")
+    public Estudiante getEstudiante(
+        @WebParam(name = "idEstudiante", targetNamespace = "")
+        int idEstudiante);
 
     /**
      * 

@@ -76,6 +76,16 @@ public class Controlador extends HttpServlet {
                 System.out.println(idmateria);
                 ServicioMatriculas_Service servicio = new ServicioMatriculas_Service();
                 ServicioMatriculas port = servicio.getServicioMatriculasPort();
+                
+                wscliente.Materia matWs = port.getMateria(Integer.parseInt(idmateria));
+                
+                if (matWs != null){
+                    request.setAttribute("nombreMateria", matWs.getNombre());
+                } else {
+                    request.setAttribute("nombreMateria", "Materia no encontrada");
+                }
+                
+
                 List<Estudiante> lista = new ArrayList<>();
                 for (wscliente.Estudiante e : port.getEstudiantePorMateria(Integer.parseInt(idmateria))) {
                     Estudiante estudiante = new Estudiante();

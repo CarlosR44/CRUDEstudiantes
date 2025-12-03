@@ -1,16 +1,19 @@
 Modelo\Materia.class
+wscliente\GetMateria.class
 wscliente\ByeResponse.class
 wscliente\package-info.class
 wscliente\Estudiante.class
 Modelo\MateriaDAO.class
 wscliente\GetMateriasPorEstudiante.class
 Controlador\ControladorMatricula.class
+wscliente\GetEstudianteResponse.class
 Modelo\MatriculaDAO.class
 wscliente\GetEstudiantePorMateria.class
 wscliente\GetEstudiantePorMateriaResponse.class
 Modelo\Test.class
 wscliente\GetMateriasPorEstudianteResponse.class
 wscliente\ServicioMatriculas_Service.class
+wscliente\GetEstudiante.class
 Modelo\Conexion.class
 wscliente\Hello.class
 Modelo\PaisesDAO.class
@@ -21,6 +24,7 @@ wscliente\HelloResponse.class
 wscliente\Materia.class
 Modelo\Estudiante.class
 Modelo\EstudianteDAO.class
+wscliente\GetMateriaResponse.class
 wscliente\ServicioMatriculas.class
 wscliente\Bye.class
 Controlador\Controlador.class

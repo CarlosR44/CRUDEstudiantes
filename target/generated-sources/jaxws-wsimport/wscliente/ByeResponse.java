@@ -32,7 +32,7 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ByeResponse {
 
-    @XmlElement(name = "return", namespace = "")
+    @XmlElement(name = "return")
     protected String _return;
 
     /**

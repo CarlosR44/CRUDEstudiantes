@@ -32,7 +32,9 @@
 
     </form>
 
-
+    <c:if test="${not empty nombreMateria}">
+        <h4>Estudiantes matriculados en la materia: <strong>${nombreMateria}</strong></h4>
+    </c:if>
 
     <table class="table table-bordered table-striped">
         <thead class="table-dark">

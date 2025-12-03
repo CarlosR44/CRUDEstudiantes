@@ -40,11 +40,15 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class Estudiante {
 
+    @XmlElement(namespace = "http://ws.crudestudiantesws.carlos.com/")
     protected String apellido;
+    @XmlElement(namespace = "http://ws.crudestudiantesws.carlos.com/")
     protected String correo;
+    @XmlElement(namespace = "http://ws.crudestudiantesws.carlos.com/")
     protected int id;
+    @XmlElement(namespace = "http://ws.crudestudiantesws.carlos.com/")
     protected String nombre;
-    @XmlElement(name = "pais_codigo")
+    @XmlElement(name = "pais_codigo", namespace = "http://ws.crudestudiantesws.carlos.com/")
     protected String paisCodigo;
 
     /**

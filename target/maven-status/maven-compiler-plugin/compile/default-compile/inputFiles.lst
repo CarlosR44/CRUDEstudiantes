@@ -2,11 +2,14 @@ C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\src\main\jav
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\src\main\java\Modelo\PaisesDAO.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\GetEstudiantePorMateria.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\src\main\java\Modelo\Conexion.java
+C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\GetEstudianteResponse.java
+C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\GetMateria.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\GetMateriasPorEstudianteResponse.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\src\main\java\Modelo\MateriaDAO.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\Hello.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\ObjectFactory.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\Estudiante.java
+C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\GetMateriaResponse.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\HelloResponse.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\src\main\java\ws\ServicioPublisher.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\Materia.java
@@ -24,4 +27,5 @@ C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\src\main\jav
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\package-info.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\src\main\java\Controlador\Controlador.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\src\main\java\Modelo\EstudianteDAO.java
+C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\GetEstudiante.java
 C:\Users\cbeff\OneDrive\Documentos\NetBeansProjects\CRUDEstudiantes\target\generated-sources\jaxws-wsimport\wscliente\ServicioMatriculas_Service.java
